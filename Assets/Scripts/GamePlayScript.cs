@@ -39,7 +39,7 @@ public class GamePlayScript : MonoBehaviour {
 			touched.Add(obj);
 			length += 1;
 		}
-		if (length >=143){
+		if (length > 143){
 			Time.timeScale = 0f;
 			WinText.SetActive(true);
 		}
