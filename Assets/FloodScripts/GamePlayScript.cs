@@ -45,7 +45,9 @@ public class GamePlayScript : MonoBehaviour {
 		}
 	}
 
-	
+	public void jsfunc(){
+		WinText.SetActive(true);
+	}
 
 	
 }
