@@ -14,7 +14,6 @@ public class GamePlayScript : MonoBehaviour {
 	private int length = 1;
 	public GameObject WinText;
 
-	// Use this for initialization
 	void Awake () {
 		GridScript = GridManager.GetComponent<gridSpawner>();
 		tiles = GridScript.children;
@@ -35,7 +34,6 @@ public class GamePlayScript : MonoBehaviour {
 
 	public void AddToTouched(GameObject obj){
 		if (touched.Contains(obj) == false){
-			//obj.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 			touched.Add(obj);
 			length += 1;
 		}

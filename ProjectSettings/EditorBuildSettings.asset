@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Jigsaw.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/tilegame.unity
+    path: Assets/Scenes/Flood.unity
     guid: 5b119c18ef8702a4ea4575616d30eaa6
+  - enabled: 0
+    path: Assets/Scenes/GuessColor.unity
+    guid: 9bb38d8c29204924382c04ce08f82ec0
   m_configObjects: {}

@@ -12,24 +12,25 @@
       #gameContainer{
         float: left;
       }
-      #Boii{
+      #CUSTOM{
         float : right;
         height : 20px;
-        width : 50px;
+        width : 250px;
       }
     </style>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/build_1.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/FloodBuild_1_1.json", {onProgress: UnityProgress});
       function ff(){
-        window.alert("Hello, world!");
-        gameInstance.SendMessage("GameManager", "jsfunc()");
+        gameInstance.SendMessage('GameManager', 'jsfunc');
       }
     </script>
   </head>
   <body>
-    <div id = "Boii"><form><button onclick="ff()" style="height:30px; width:50px;">Yo</button></form></div>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+    <iframe id = "F" src="index.html" name = "Containerframe" width = "1200" height = "1200"></iframe>
+
+    <div id = "CUSTOM"><form><button onclick ="ff()" style="height:30px; width:50px;">TestButton</button></form></div>
+    <div class="webgl-content" >
+      <div id="gameContainer" target = "gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>

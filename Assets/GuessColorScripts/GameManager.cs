@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject BulbSpawner;
 	private int pos;
 	public GameObject dumbo;
+	public int NumberOfObjects = 4;
 
 	void Start () {
 		SpawnerScript = RowSpawner.GetComponent<RowSpawner>(); // using object to access script
@@ -21,12 +22,12 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void AddColor(Button btn){
-		if (i < 3){
+		if (i < (NumberOfObjects-1)){
 			answer[i].GetComponent<Renderer>().material.color = btn.GetComponent<Image>().color; // coloring the first three tiles
 			i += 1; // increasing tile index
 		}
 		else{
-			answer[3].GetComponent<Renderer>().material.color = btn.GetComponent<Image>().color; // coloring the 4th tile on every try
+			answer[NumberOfObjects-1].GetComponent<Renderer>().material.color = btn.GetComponent<Image>().color; // coloring the 4th tile on every try
 			i = 0; // resetting tile index for next round
 			check();
 		}
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour {
 		foreach (Color c in SpawnerScript.question){
 			tempquestion.Add(c);
 		}
-		for (int j = 0; j < 4; j++){ // for traversing the answer array
+		for (int j = 0; j < NumberOfObjects; j++){ // for traversing the answer array
 			if (tempquestion.Contains(answer[j].GetComponent<Renderer>().material.color)){
 				pos = tempquestion.IndexOf(answer[j].GetComponent<Renderer>().material.color);
 				if (pos == j){
@@ -51,9 +52,8 @@ public class GameManager : MonoBehaviour {
 				tempquestion[pos] = dumbo.GetComponent<Renderer>().material.color;
 			}
 		}
-		Debug.Log("Black: " + black + "  white: " + white);
 		ResultScript.BulbSpawn(black, white);
-		if (black != 4){
+		if (black != NumberOfObjects){
 			answer = new List<GameObject>();
 			SpawnerScript.Spawn();
 		}

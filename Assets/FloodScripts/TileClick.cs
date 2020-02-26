@@ -7,7 +7,6 @@ public class TileClick : MonoBehaviour {
 	GamePlayScript MainScript;
 	public GameObject GameManager;
 
-	// Use this for initialization
 	void Start () {
 		MainScript = GameManager.GetComponent<GamePlayScript>();
 	}

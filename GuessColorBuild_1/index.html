@@ -8,26 +8,11 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
-    <style>
-      #gameContainer{
-        float: left;
-      }
-      #Boii{
-        float : right;
-        height : 20px;
-        width : 50px;
-      }
-    </style>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/build_1.json", {onProgress: UnityProgress});
-      function ff(){
-        window.alert("Hello, world!");
-        gameInstance.SendMessage("GameManager", "jsfunc()");
-      }
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/GuessColorBuild_1.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
-    <div id = "Boii"><form><button onclick="ff()" style="height:30px; width:50px;">Yo</button></form></div>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">

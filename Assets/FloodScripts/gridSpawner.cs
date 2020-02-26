@@ -5,6 +5,7 @@ using UnityEngine;
 public class gridSpawner : MonoBehaviour {
 	public Color[] TileColor;
 	public List<GameObject> children = new List<GameObject>();
+	
 	void Awake () {
 		foreach(Transform t in transform){
 			children.Add(t.gameObject);
