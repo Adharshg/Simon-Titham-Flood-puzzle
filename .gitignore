@@ -9,6 +9,9 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/FloodBuild_1/
+/FloodBuild_1_1/
+/GuessColorBuild_1/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
